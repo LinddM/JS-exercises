@@ -1,5 +1,5 @@
 // Test One Restrictions: Do not declare any new variable with the let keyword
-let testOneMessage = 'test failing';
+let testOneMessage = 'test succeeding';
 
 function testOne() {
   return testOneMessage;
@@ -8,7 +8,7 @@ function testOne() {
 
 // Test Two Restrictions: Do not change any code in the body of testTwo
 // (you can edit helperFunc though)
-let testTwoMessage = 'test failing';
+let testTwoMessage = 'test succeeding';
 
 function testTwo() {
   helperFunc();
@@ -29,7 +29,7 @@ function testThree(testThreeMessage) {
     testThreeMessage = 'test succeeding';
   }
 
-  let msg = getMessage();
+  let msg = getMessage(1);
   return msg;
 
   function getMessage(value) {
@@ -49,7 +49,7 @@ function testFour(msg) {
   function innerFunc(msg) {
     msg = msg
 
-    function doubleInner(msg) {
+    function doubleInner() {
       testFourMessage = msg;
       return testFourMessage;
     }
